@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""Render the 20 November 2026 front page, v2 — total rebuild.
+"""Render the 20 November 2026 front page, v3 — evening pass.
 
-Reads stories.json (36 stories, every one with event_date 2026-11-20
-plus sources) and draws a 1024x1024 newspaper front page with Pillow:
+Reads stories.json (40 stories: 36 with event_date 2026-11-20, plus
+four Thursday late closes — Anthropic, Senate, Berlin, Pete Rose —
+carried as the Friday paper's lead stories, the way the day's papers
+do) and draws a 1024x1024 newspaper front page with Pillow:
 cream paper, navy ribbon, a giant serif date masthead, a coloured region
 bar, a THE DAY IN NUMBERS strip, a FRIDAY BY THE HOURS timeline, three
 illustrated hero cards, ten illustrated medium cards, a dark-blue world
@@ -52,9 +54,9 @@ GREEN = (64, 110, 66)
 PLUM = (110, 70, 120)
 
 REGION_COLOURS = [
-    ("EUROPE", 10, (36, 64, 110)),
+    ("EUROPE", 11, (36, 64, 110)),
     ("ASIA-PACIFIC", 13, RED),
-    ("AMERICAS", 4, (176, 124, 28)),
+    ("AMERICAS", 7, (176, 124, 28)),
     ("MIDEAST", 4, PLUM),
     ("AFRICA", 1, GREEN),
     ("OCEANIA", 2, TEAL),
@@ -525,12 +527,112 @@ def art_gaza(draw, x, y, w, h):
                   width=1)
 
 
+def art_anthropic(draw, x, y, w, h):
+    """Anthropic first close: rising candlesticks on dark green."""
+    draw.rectangle([x, y, x + w, y + h], fill=(24, 64, 44))
+    # Baseline grid.
+    for i in range(1, 3):
+        gy = y + h * i / 3
+        draw.line([(x + w * 0.06, gy), (x + w * 0.94, gy)],
+                  fill=(52, 96, 72), width=1)
+    # Five candles climbing left to right; last one tallest, green.
+    cols = [(214, 90, 60), (214, 90, 60), (110, 190, 120),
+            (110, 190, 120), (140, 215, 150)]
+    for i, col in enumerate(cols):
+        cx0 = x + w * (0.10 + i * 0.18)
+        cw = w * 0.09
+        top = y + h * (0.62 - i * 0.10)
+        bot = y + h * (0.78 - i * 0.06)
+        draw.line([(cx0 + cw / 2, top - h * 0.08),
+                   (cx0 + cw / 2, bot + h * 0.06)], fill=col, width=2)
+        draw.rectangle([cx0, top, cx0 + cw, bot], fill=col)
+    # Arrowhead on the last candle's wick.
+    ex, ey = x + w * 0.86, y + h * 0.10
+    draw.polygon([(ex, ey), (ex - w * 0.07, ey + h * 0.10),
+                  (ex + w * 0.07, ey + h * 0.10)], fill=(140, 215, 150))
+
+
+def art_senate(draw, x, y, w, h):
+    """Senate war-powers vote: the Capitol dome on navy."""
+    draw.rectangle([x, y, x + w, y + h], fill=NAVY)
+    # Dome.
+    dx0, dy0 = x + w * 0.30, y + h * 0.30
+    dw, dh = w * 0.40, h * 0.34
+    draw.pieslice([dx0, dy0 - dh * 0.55, dx0 + dw, dy0 + dh * 0.45],
+                  180, 360, fill=(240, 234, 220))
+    draw.rectangle([dx0, dy0 + dh * 0.10, dx0 + dw, dy0 + dh], fill=WHITE)
+    draw.line([(dx0 + dw * 0.5, dy0 - dh * 0.55),
+               (dx0 + dw * 0.5, dy0 - dh * 0.75)], fill=WHITE, width=2)
+    # Columns.
+    for i in range(5):
+        cx0 = x + w * (0.16 + i * 0.15)
+        draw.rectangle([cx0, y + h * 0.68, cx0 + w * 0.06, y + h * 0.92],
+                       fill=(240, 234, 220))
+    draw.rectangle([x + w * 0.10, y + h * 0.64, x + w * 0.90,
+                    y + h * 0.68], fill=(240, 234, 220))
+    draw.rectangle([x + w * 0.10, y + h * 0.92, x + w * 0.90,
+                    y + h * 0.96], fill=(240, 234, 220))
+    # Red vote tally bar.
+    draw.rectangle([x + w * 0.08, y + h * 0.08, x + w * 0.92,
+                    y + h * 0.16], fill=RED)
+
+
+def art_berlin(draw, x, y, w, h):
+    """Berlin talks: the Brandenburg Gate at dusk, German colours."""
+    draw.rectangle([x, y, x + w, y + h], fill=(222, 214, 190))
+    # Sky band.
+    draw.rectangle([x, y, x + w, y + h * 0.30], fill=(214, 178, 120))
+    # Gate: entablature + six columns.
+    draw.rectangle([x + w * 0.10, y + h * 0.30, x + w * 0.90,
+                    y + h * 0.42], fill=(150, 132, 104))
+    for i in range(6):
+        cx0 = x + w * (0.13 + i * 0.135)
+        draw.rectangle([cx0, y + h * 0.42, cx0 + w * 0.07, y + h * 0.92],
+                       fill=(178, 160, 130))
+    draw.rectangle([x + w * 0.10, y + h * 0.92, x + w * 0.90,
+                    y + h * 0.96], fill=(150, 132, 104))
+    # Quadriga: tiny chariot silhouette on top.
+    draw.polygon([(x + w * 0.44, y + h * 0.30), (x + w * 0.50, y + h * 0.18),
+                  (x + w * 0.56, y + h * 0.30)], fill=INK)
+    # German flag stripe at the base.
+    for i, col in enumerate([(0, 0, 0), (222, 42, 36), (232, 190, 60)]):
+        draw.rectangle([x + w * (0.10 + i * 0.27), y + h * 0.97,
+                        x + w * (0.37 + i * 0.27), y + h], fill=col)
+
+
+def art_baseball(draw, x, y, w, h):
+    """Pete Rose: a baseball with red seams over a green field."""
+    draw.rectangle([x, y, x + w, y + h], fill=(64, 110, 66))
+    # Outfield wall.
+    draw.rectangle([x, y + h * 0.72, x + w, y + h], fill=(120, 160, 90))
+    # The ball.
+    bx, by, br = x + w * 0.5, y + h * 0.44, min(w, h) * 0.34
+    draw.ellipse([bx - br, by - br, bx + br, by + br], fill=WHITE,
+                 outline=(200, 200, 200), width=1)
+    # Red seams: two curved stitch lines.
+    draw.arc([bx - br * 0.85, by - br, bx + br * 0.45, by + br], 250, 70,
+             fill=RED, width=max(2, int(min(w, h) * 0.04)))
+    draw.arc([bx - br * 0.45, by - br, bx + br * 0.85, by + br], 70, 250,
+             fill=RED, width=max(2, int(min(w, h) * 0.04)))
+    # Stitch ticks along the seams.
+    for a in (290, 320, 350, 20):
+        r = math.radians(a)
+        sx, sy = bx + br * 0.55 * math.cos(r), by + br * 0.85 * math.sin(r)
+        draw.line([(sx - 3, sy), (sx + 3, sy)], fill=RED, width=2)
+    for a in (110, 140, 170, 200):
+        r = math.radians(a)
+        sx, sy = bx + br * 0.55 * math.cos(r), by + br * 0.85 * math.sin(r)
+        draw.line([(sx - 3, sy), (sx + 3, sy)], fill=RED, width=2)
+
+
 ART = {
     "akvan": art_akvan, "cop31": art_cop31, "ukeu": art_ukeu,
     "apec": art_apec, "youth": art_youth, "italy": art_italy,
     "cricket": art_cricket, "florida": art_florida, "gta": art_gta,
     "markets": art_markets, "china": art_china, "modi": art_modi,
     "gaza": art_gaza,
+    "anthropic": art_anthropic, "senate": art_senate,
+    "berlin": art_berlin, "baseball": art_baseball,
 }
 
 
@@ -658,16 +760,32 @@ def draw_map(draw, stories, x, y, w, h):
         px, py = proj(item["lon"], item["lat"])
         draw.ellipse([px - 2, py - 2, px + 2, py + 2],
                      fill=(190, 200, 210))
-    # Numbered red pins for heroes + mediums.
+    # Numbered red pins for heroes + mediums. Pins that would land on
+    # top of each other (the US east coast holds five: New York,
+    # Washington, Cincinnati, Florida, Los Santos; Europe four) are
+    # nudged apart with a thin connector back to the true spot, so
+    # every number stays readable.
     pin_face = typeface("pin")
+    placed = []
     for item in stories["heroes"] + stories["mediums"]:
         px, py = proj(item["lon"], item["lat"])
+        cx, cy = px, py
+        for dx, dy in [(0, 0), (0, 13), (0, -13), (15, 0), (-15, 0),
+                       (15, 13), (-15, -13), (15, -13), (-15, 13)]:
+            tx, ty = px + dx, py + dy
+            if all((tx - ox) ** 2 + (ty - oy) ** 2 >= 15 ** 2
+                   for ox, oy in placed):
+                cx, cy = tx, ty
+                break
+        placed.append((cx, cy))
+        if (cx, cy) != (px, py):
+            draw.line([(px, py), (cx, cy)], fill=WHITE, width=1)
         r = 7
-        draw.ellipse([px - r, py - r, px + r, py + r], fill=RED,
+        draw.ellipse([cx - r, cy - r, cx + r, cy + r], fill=RED,
                      outline=WHITE, width=1)
         num = str(item["n"])
         tw = pin_face.getlength(num)
-        draw.text((px - tw / 2, py - 6), num, font=pin_face, fill=WHITE)
+        draw.text((cx - tw / 2, cy - 6), num, font=pin_face, fill=WHITE)
 
 
 # --- Page -------------------------------------------------------------------
@@ -678,9 +796,11 @@ def render_page(stories, out_path):
     draw = ImageDraw.Draw(img)
 
     # ---- Masthead: eyebrow, giant serif date, red italic subline. ----
+    total_stories = (len(stories["heroes"]) + len(stories["mediums"])
+                     + len(stories["also"]))
     eyebrow = typeface("eyebrow")
     spaced_centred(draw, PAGE_W // 2, 12,
-                   "THE WORLD IN ONE DAY  ·  ONE PAGE  ·  36 STORIES",
+                   f"THE WORLD IN ONE DAY  ·  ONE PAGE  ·  {total_stories} STORIES",
                    eyebrow, GREY, gap=2)
     mast = typeface("masthead")
     date = stories["date"]
@@ -692,16 +812,17 @@ def render_page(stories, out_path):
               fill=RED)
     hline(draw, EDGE, PAGE_W - EDGE, 112, colour=INK, weight=2)
 
-    # ---- Region bar: coloured segments, counts in white. ----
+    # ---- Region bar: seven equal coloured segments, every one
+    # labelled "LABEL N". (v2 scaled segments by count, so the last
+    # three showed only bare numbers "1, 2, 2" with no label.)
     y = 120
-    total = sum(c for _, c, _ in REGION_COLOURS)
     pen_x = EDGE
     bar_face = ImageFont.truetype(
         os.path.join(FONT_DIR, "InstrumentSans-Bold.ttf"), 11)
+    seg_w = CONTENT_W // len(REGION_COLOURS)
     for name, count, colour in REGION_COLOURS:
-        seg_w = int(CONTENT_W * count / total)
         draw.rectangle([pen_x, y, pen_x + seg_w, y + 22], fill=colour)
-        label = f"{name} {count}" if seg_w >= 64 else str(count)
+        label = f"{name} {count}"
         tw = bar_face.getlength(label)
         draw.text((pen_x + (seg_w - tw) / 2, y + 5), label,
                   font=bar_face, fill=WHITE)
@@ -815,7 +936,7 @@ def render_page(stories, out_path):
     draw_map(draw, stories, EDGE, y, CONTENT_W, map_h)
     y += map_h
 
-    # ---- ALSO TODAY: numbered 14-36 in three columns. ----
+    # ---- ALSO TODAY: numbered 14-40 in three columns. ----
     y = section_head(draw, EDGE, y + 6, "ALSO TODAY")
     also_face = typeface("also")
     num_face = typeface("also_num")
@@ -823,7 +944,7 @@ def render_page(stories, out_path):
     row_h = 13
     cols = [[], [], []]
     for i, item in enumerate(stories["also"]):
-        cols[i // 8].append(item)
+        cols[i // 9].append(item)
     for ci, items in enumerate(cols):
         cx = EDGE + ci * (col_w + 14)
         for ri, item in enumerate(items):
@@ -836,14 +957,15 @@ def render_page(stories, out_path):
                 txt = txt[:-5].rstrip() + "…"
             draw.text((cx + num_face.getlength(ntxt) + 6, iy), txt,
                       font=also_face, fill=INK)
-    y += 8 * row_h
+    y += 9 * row_h
 
     # ---- DATE CHECK: what did NOT happen on Friday. ----
     y += 4
     box_y = y
+    box_h = 74
     check_face = typeface("check")
-    draw.rectangle([EDGE, box_y, PAGE_W - EDGE, box_y + 84], fill=PANEL)
-    draw.rectangle([EDGE, box_y, PAGE_W - EDGE, box_y + 84],
+    draw.rectangle([EDGE, box_y, PAGE_W - EDGE, box_y + box_h], fill=PANEL)
+    draw.rectangle([EDGE, box_y, PAGE_W - EDGE, box_y + box_h],
                    outline=HAIRLINE, width=1)
     spaced_text(draw, EDGE + 10, box_y + 7,
                 "DATE CHECK — THESE HAPPENED EARLIER, NOT ON FRIDAY",
@@ -851,8 +973,11 @@ def render_page(stories, out_path):
     ccol_w = (CONTENT_W - 20 - 2 * 14) // 3
     for ci in range(3):
         cx = EDGE + 10 + ci * (ccol_w + 14)
-        for ri in range(4):
-            item = stories["date_check"][ci * 4 + ri]
+        for ri in range(3):
+            idx = ci * 3 + ri
+            if idx >= len(stories["date_check"]):
+                continue
+            item = stories["date_check"][idx]
             iy = box_y + 24 + ri * 11
             # Red X drawn with two strokes (no glyph dependency).
             draw.line([(cx, iy + 2), (cx + 7, iy + 9)], fill=RED, width=2)
@@ -862,9 +987,9 @@ def render_page(stories, out_path):
                 txt = txt[:-5].rstrip() + "…"
             draw.text((cx + 10, iy), txt, font=check_face, fill=INK)
     not_yet = stories["not_yet"]
-    draw.text((EDGE + 10, box_y + 24 + 4 * 11 + 2), not_yet,
+    draw.text((EDGE + 10, box_y + 24 + 3 * 11 + 2), not_yet,
               font=check_face, fill=RED)
-    y = box_y + 84
+    y = box_y + box_h
 
     # ---- Footer: the date promise + sources. ----
     y += 6
@@ -872,8 +997,7 @@ def render_page(stories, out_path):
     foot = typeface("foot")
     total = (len(stories["heroes"]) + len(stories["mediums"])
              + len(stories["also"]))
-    line1 = (f"{total} STORIES  ·  FRIDAY, 20 NOVEMBER 2026  ·  "
-             + stories["footer"])
+    line1 = f"{total} STORIES  ·  " + stories["footer"]
     for ln in wrap_text(line1, foot, CONTENT_W):
         draw.text(((PAGE_W - foot.getlength(ln)) / 2, y + 5), ln,
                   font=foot, fill=GREY)

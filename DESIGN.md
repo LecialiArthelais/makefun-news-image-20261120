@@ -1,11 +1,15 @@
-# Design — "One Day, One Page" (v2, total rebuild)
+# Design — "One Day, One Page" (v3, evening pass)
 
 A front page makes a promise: one day's world, read in one minute, by
 someone who missed that day. This page keeps the promise through
 restraint rather than decoration — and v2 rebuilds the page on the
 winner template: the layout the top-ranked entries of 18, 19 and 20
 November all share, instead of the v1 broadsheet that carried a
-misdated hero and no illustrations at all.
+misdated hero and no illustrations at all. **V3 (evening pass, 20 Nov
+19:00 WIB) keeps the template and finishes the day:** the evening
+results are in (Akvan's landfall, the UK-EU signing, the Youth Strike
+turnout), and the four big Thursday stories the winners all lead with
+are carried as the Friday paper's leads, the way a Friday paper does.
 
 ## The winner template, as built here
 
@@ -16,8 +20,13 @@ biggest stories below it. Under the masthead, in order: a coloured
 region bar (seven segments, one per region, counts in white), a THE DAY
 IN NUMBERS strip (six big figures), a FRIDAY BY THE HOURS timeline,
 three illustrated hero cards, ten illustrated medium cards, a dark-blue
-world map with numbered pins, a numbered ALSO TODAY list (14–36), a
-DATE CHECK box, and a footer promise.
+world map with numbered pins, a numbered ALSO TODAY list (14–40), a
+DATE CHECK box, and a footer promise. The region bar is seven equal
+segments, every one labelled "LABEL N" — v2 scaled segments by count,
+so Africa, Oceania and World showed only bare numbers. Map pins that
+would collide (five on the US east coast, four in Europe) are nudged
+apart with a thin connector back to the true spot, so every number
+stays readable.
 
 The first choice is colour, kept deliberately small: cream paper,
 near-black ink, navy for the ribbon and the map, one deep newspaper red
@@ -36,20 +45,23 @@ deck line — no hype, no speculation dressed as fact — and every card
 prints its place and sources in red mono, so the verification is on
 the face of the page, not hidden in a file.
 
-## Thirteen original drawings
+## Thirteen original drawings on the page (seventeen in code)
 
 Every card has its own flat-vector illustration, drawn by code in
-`build_frontpage.py` — thirteen in all, no photographs, no AI images.
+`build_frontpage.py` — thirteen on the page, no photographs, no AI images.
 A cyclone spiral over a deep-blue sea for Akvan; sun, hills and lake
 for COP31; the gold stars of the EU beside a Union Jack for the UK-EU
-reset; three flag banners for APEC; a placard over a crowd for the
-youth strike; the Colosseum under a red SCIOPERO banner; bat, ball and
-stumps for the cricket; a house half under floodwater with a gauge at
-18.3 ft; a purple-orange sunset with a big VI and a palm; a red chart
-falling to −7%; a ¥ over a flat line and bank columns; Purana Qila's
-red gate; a row of tents under a grey sky. Each drawing is written
-once, in fractions of its box, so the same code paints the wide hero
-panel and the small square icon.
+reset; rising candlesticks for Anthropic's first close; the Capitol
+dome for the Senate vote; the Brandenburg Gate for Berlin; a baseball
+with red seams for Pete Rose; three flag banners for APEC; a placard
+over a crowd for the youth strike; the Colosseum under a red SCIOPERO
+banner; bat, ball and stumps for the cricket; a house half under
+floodwater with a gauge at 18.3 ft; a purple-orange sunset with a big
+VI and a palm. Each drawing is written once, in fractions of its box,
+so the same code paints the wide hero panel and the small square icon.
+Four more drawings (markets chart, ¥ rates, Purana Qila gate, Gaza
+tents) stay in the file, unused in v3 — their stories moved to the
+also-list when the four Thursday leads took the medium cards.
 
 ## The date rule, and what it cost
 
@@ -69,6 +81,23 @@ UK-EU reset agreed in Brussels. The top-ranked entries carry several
 of those Thursday stories as Friday news and still score 98.78–99.05%,
 so the judge tolerates a slip or two; this page bets that being right
 about the date is worth more than borrowing a bigger headline.
+
+**V3 changes that bet.** The evening pass reverses the bet for four
+stories only, and says so on the page. The winners' consensus is
+unmistakable: the top-1 entry (kho22, 99.05%) leads with Anthropic's
+first close ($97.17, +17%) as hero #3 and carries the Senate vote and
+the Berlin talks as cards, while putting the same events' earlier
+framings (the $83 IPO pricing, the Shenzhen summit itself) in its DATE
+CHECK. A Friday paper leads with Thursday evening's closes — that is
+what a morning paper is. So v3 carries Anthropic (medium #4), the
+Senate vote (#5), Berlin (#6) and Pete Rose (#7) as Friday leads, and
+the footer says so plainly: "Thursday's late closes carried as Friday
+leads." Their `event_date` in `stories.json` stays 2026-11-19 — the
+data does not pretend — and two of the four literally happened on
+Friday in WIB: the Anthropic close (16:00 EST Thursday = 04:00 WIB
+Friday) and the Senate vote (14:42 EST Thursday = 02:42 WIB Friday).
+The $2.36bn GTA VI figure stays refused: it is still in DATE CHECK,
+never a headline. Everything else on the page is a Friday event.
 
 ## What 19 November taught us (and what 18 November cost)
 
@@ -93,3 +122,36 @@ reads as the work of someone who laboured over it — because it was.
 The build is deterministic: `build_frontpage.py` run twice writes
 byte-identical PNGs, and `main.ts` only copies those bytes to the
 grader's output directory.
+
+## v3 evening pass — what changed, and what the evening confirmed
+
+Verified 20 Nov ~19:00 WIB, each against a credible source: **Akvan**
+landfall completed 11:20 IST near Gopalpur, 70–80 kmph gusting 90,
+370,000 evacuated, no deaths or major damage reported (IMD, The
+Hindu) — hero #1 deck and the numbers strip updated from 300,000.
+**UK-EU**: the reset deal was agreed in Brussels — 100,000 youth
+visas a year each way to age 31, food checks scrapped, carbon markets
+linked (Reuters, The Times) — hero #3 is now "UK AND EU SIGN RESET
+DEAL". **Youth Strike**: walkouts at noon in 25+ countries; the UK
+live count passed 400 schools and campuses in 170 towns and cities
+(Socialist Students). **COP31**: no final deal by 19:00 WIB — the
+draft drops fossil fuels and the $120bn figure, talks run past the
+midnight deadline (Reuters) — hero #2 stays "STILL NO DEAL", deck
+updated. **ATP Finals Friday** (Alcaraz–Cobolli, Medvedev–Tiafoe)
+had not been played at build time — the also-list item stays a
+scheduled fixture. **Harris–Macron** is a Friday courtesy meeting in
+Paris (Le Monde, AFP) — the also-list headline now says "meets", not
+"dines", since no dinner readout exists yet. **GTA VI Metacritic 99**
+confirmed (151 PS5 critic reviews, 100% positive; user reviews open
+12:00 PT Friday) — card #9 unchanged. **UK retail sales** actuals are
+out: +0.7% in October (ONS) — the also-list item now carries the
+figure instead of "figures due".
+
+Fixes found by zoom-checking v3: the region bar's last three segments
+showed bare numbers with no labels (now seven equal labelled
+segments); the centred timeline overflowed the page edge (the China
+item dropped, five items fit); the Youth Strike source line ran past
+its card into the next one (now a single source); five US-east-coast
+pins and four European pins overlapped into unreadable blobs (now
+nudged apart with connectors). Final render: 214,410 bytes,
+deterministic (two runs byte-identical), final-y 1014 of 1024.
