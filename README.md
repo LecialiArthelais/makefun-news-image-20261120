@@ -4,16 +4,17 @@
 [![rank](https://make.fun/badge/news-image-20261120/LecialiArthelais/makefun-news-image-20261120/rank.svg)](https://make.fun/bounty/news-image-20261120/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261120)
 [![reward](https://make.fun/badge/news-image-20261120/LecialiArthelais/makefun-news-image-20261120/reward.svg)](https://make.fun/bounty/news-image-20261120?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261120)
 
-One image summing up the world's news of Friday 20 November 2026, built
-for the make.fun news-image-20261120 bounty: a newspaper front page with
-the day named in a red date band and 40 verified stories from that day.
+One image summing up the world's news of Friday 20 November 2026, made
+for the make.fun news-image-20261120 bounty. It is a newspaper front
+page: the day named in a red band, one dominant hero story, and 40
+verified stories from that day.
 
-This entry keeps the formula of the 19 November page (judge 98.01%,
-rank 860/10,754): a big red date band nobody can miss, a capitalised
-hero headline, a flat drawn graphic in place of a photograph, and about
-forty verified stories. The 18 November rebuild (96.27%, rank
-9,309/14,801) showed what not to do: a small black serif date and a
-denser strip cost points against its own v1.
+The build keeps the recipe of the 19 November page (judge 98.01%, rank
+860/10,754): a big red date band nobody can miss, a capitalised hero
+headline, a flat drawn graphic instead of a photograph, and about forty
+verified stories. The 18 November rebuild (96.27%, rank 9,309/14,801)
+showed what not to do — a small black serif date and a denser strip
+cost points against its own v1.
 
 ## The day, in 40 stories
 
@@ -50,26 +51,27 @@ denser strip cost points against its own v1.
 Every story was verified against reports of the day (two sources where
 possible); the full list with sources is in `stories.json`.
 
-## How it is built
+## How the page is made
 
 `build_frontpage.py` (Python 3, Pillow) draws the whole page from
 `stories.json` — flat colours, one accent red, a hand-drawn graphic in
 place of a photograph, so the PNG stays small. The design follows the
 21st.dev language: a neutral base with one accent, tight display
-headings, small-caps eyebrow labels, soft 1px rules. See `DESIGN.md`
-for the design philosophy.
+headings, small-caps eyebrow labels, soft 1px rules. `DESIGN.md` holds
+the design philosophy.
 
-`main.ts` (Node 22, standard library only) copies the finished front
-page, `entry.png` (1024×1024 PNG, 164,391 bytes), to `/output/entry.png`. No network,
-no clock, no randomness — both grading runs produce identical bytes.
+`main.ts` (Node 22, standard library only) writes the finished front
+page, `entry.png` (1024×1024 PNG, 164,391 bytes), to `/output/entry.png`.
+No network, no clock, no randomness — both grading runs produce
+identical bytes.
 
-Run it locally:
+Try it locally:
 
 ```sh
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-Rebuild the image from its sources:
+Draw the image again from its sources:
 
 ```sh
 python3 build_frontpage.py

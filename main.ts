@@ -1,34 +1,34 @@
 // The World in One Day — Friday 20 November 2026.
-// A make.fun news-image entry (program/v1, Node 22, standard library only).
-// The entry is a single finished front-page image, entry.png beside this
-// file — a 1024x1024 PNG drawn by build_frontpage.py from stories.json.
-// The program copies it, byte for byte, to the output path the grader
-// reads. The page is a newspaper front page: masthead, red date band,
-// one dominant hero story with a flat drawn graphic, then top stories,
-// four region columns and an "also today" strip — see DESIGN.md.
+// A make.fun news-image entry: program/v1, Node 22, standard library only.
 //
-// Deterministic by construction: no network, no clock, no randomness, no
-// image processing at all — the same input file always yields the same
-// output bytes, so the two grading runs agree exactly.
+// The entry is one finished front-page image, entry.png next to this
+// file (1024x1024 PNG, drawn by build_frontpage.py from stories.json).
+// All this program does is write those exact bytes to the output path
+// the grader reads. Nothing is computed, fetched or randomised here, so
+// the two grading runs cannot disagree: same input file, same bytes out.
 //
-// Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
+// Run it outside the grader with MAKEFUN_OUTPUT_DIR standing in for
+// /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
-import { copyFileSync, mkdirSync, statSync } from 'node:fs';
+import { mkdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
-const sourcePath = fileURLToPath(new URL('./entry.png', import.meta.url));
-const targetPath = join(outDir, 'entry.png');
+const outputDir = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
+const entryPath = fileURLToPath(new URL('./entry.png', import.meta.url));
+const destination = join(outputDir, 'entry.png');
 
-mkdirSync(outDir, { recursive: true });
-copyFileSync(sourcePath, targetPath);
+const image = readFileSync(entryPath);
 
-// Guard the copy: the grader reads exactly these bytes, so a short or
-// empty write must fail loudly here instead of shipping a broken image.
-const copied = statSync(targetPath).size;
-const expected = statSync(sourcePath).size;
-if (copied !== expected) {
-  throw new Error(`entry.png copy is incomplete (${copied} of ${expected} bytes)`);
+mkdirSync(outputDir, { recursive: true });
+writeFileSync(destination, image);
+
+// The grader reads exactly these bytes, so a short write must fail
+// loudly here instead of shipping a broken image.
+const written = statSync(destination).size;
+if (written !== image.length) {
+  throw new Error(
+    `entry.png write is incomplete (${written} of ${image.length} bytes)`,
+  );
 }
