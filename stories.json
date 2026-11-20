@@ -1,220 +1,557 @@
 {
   "also": [
     {
-      "deck": "Five measures to steady stocks; short-selling limits take effect today",
-      "headline": "Taiwan acts to calm stock sell-off",
-      "sources": ["SimpleLife.news", "Malaya Business Insight"]
+      "event_date": "2026-11-20",
+      "headline": "Japan core inflation 2.2% in October",
+      "lat": 35.7,
+      "lon": 139.7,
+      "n": 14,
+      "place": "Tokyo",
+      "sources": [
+        "Reuters"
+      ]
     },
     {
-      "deck": "Stance unchanged since 1972, she tells APEC press corps",
-      "headline": "Takaichi ducks Taiwan contingency question",
-      "sources": ["SimpleLife.news"]
+      "event_date": "2026-11-20",
+      "headline": "Harris dines with Macron in Paris",
+      "lat": 48.86,
+      "lon": 2.35,
+      "n": 15,
+      "place": "Paris",
+      "sources": [
+        "Le Monde",
+        "AFP"
+      ]
     },
     {
-      "deck": "US media verdict after the Shenzhen summit",
-      "headline": "Xi and Putin seen as summit winners",
-      "sources": ["SimpleLife.news", "NYT", "CNN"]
+      "event_date": "2026-11-20",
+      "headline": "Trump to hold White House press conference",
+      "lat": 38.9,
+      "lon": -77.0,
+      "n": 16,
+      "place": "Washington",
+      "sources": [
+        "White House"
+      ]
     },
     {
-      "deck": "Upgrade for the Navy's Barak missile shield",
-      "headline": "India seals Rs 1,976-crore deal with Israel Aerospace",
-      "sources": ["JagranJosh"]
+      "event_date": "2026-11-20",
+      "headline": "Portugal's public sector strikes",
+      "lat": 38.7,
+      "lon": -9.1,
+      "n": 17,
+      "place": "Lisbon",
+      "sources": [
+        "Lusa"
+      ]
     },
     {
-      "deck": "Milestone for home-grown health innovation",
-      "headline": "ICMR completes 100 tech-transfer deals",
-      "sources": ["JagranJosh"]
+      "event_date": "2026-11-20",
+      "headline": "ATP Finals: Alcaraz-Cobolli, Medvedev-Tiafoe",
+      "lat": 45.07,
+      "lon": 7.7,
+      "n": 18,
+      "place": "Turin",
+      "sources": [
+        "ATP"
+      ]
     },
     {
-      "deck": "Eight teams in Doha, including India A and Pakistan A",
-      "headline": "Rising Stars Asia Cup begins in Qatar",
-      "sources": ["JagranJosh"]
+      "event_date": "2026-11-20",
+      "headline": "World Children's Day marked worldwide",
+      "lat": 40.7,
+      "lon": -74.0,
+      "n": 19,
+      "place": "New York",
+      "sources": [
+        "UN"
+      ]
     },
     {
-      "deck": "Prima retinal implant rollout across Europe",
-      "headline": "Science Corp raises $400m for sight-restoring implant",
-      "sources": ["Health News Wired"]
+      "event_date": "2026-11-20",
+      "headline": "Cyclone Xavier weakens off Cook Islands",
+      "lat": -21.2,
+      "lon": -160.0,
+      "n": 20,
+      "place": "Cook Islands",
+      "sources": [
+        "RSMC Nadi"
+      ]
     },
     {
-      "deck": "First US sanctions on an Australian crime group",
-      "headline": "US sanctions Comanchero motorcycle gang",
-      "sources": ["Reuters"]
+      "event_date": "2026-11-20",
+      "headline": "Fed's Paulson speaks late Friday",
+      "lat": 38.85,
+      "lon": -77.4,
+      "n": 21,
+      "place": "Washington",
+      "sources": [
+        "Fed"
+      ]
     },
     {
-      "deck": "Court rules staff emails breached the constitution",
-      "headline": "US agriculture chief's religious emails unlawful",
-      "sources": ["The Guardian"]
+      "event_date": "2026-11-20",
+      "headline": "Albanese to meet Li Qiang in Beijing",
+      "lat": 39.6,
+      "lon": 116.8,
+      "n": 22,
+      "place": "Beijing",
+      "sources": [
+        "AAP"
+      ]
     },
     {
-      "deck": "Big tech builds fast; Labor pressed on loopholes",
-      "headline": "Australia pressed over data-centre rules",
-      "sources": ["The Guardian"]
+      "event_date": "2026-11-20",
+      "headline": "Xi meets Prabowo in Shenzhen",
+      "lat": 22.4,
+      "lon": 114.4,
+      "n": 23,
+      "place": "Shenzhen",
+      "sources": [
+        "Xinhua"
+      ]
     },
     {
-      "deck": "Gale warning for Suwarrow; storm alert for Nassau and Pukapuka",
-      "headline": "CYCLONE XAVIER BEARS DOWN ON COOK ISLANDS",
-      "sources": ["Fiji Met Service", "WMO"]
+      "event_date": "2026-11-20",
+      "headline": "Taiwan steadies stocks; curbs take effect",
+      "lat": 25.0,
+      "lon": 121.5,
+      "n": 24,
+      "place": "Taipei",
+      "sources": [
+        "FSC"
+      ]
     },
     {
-      "deck": "Lawrence, Hutcherson and Harrelson return",
-      "headline": "Hunger Games stars back for Sunrise on the Reaping",
-      "sources": ["Variety"]
+      "event_date": "2026-11-20",
+      "headline": "Four nations demand Gaza aid access",
+      "lat": 31.4,
+      "lon": 34.8,
+      "n": 25,
+      "place": "Gaza",
+      "sources": [
+        "The Paris Eye"
+      ]
+    },
+    {
+      "event_date": "2026-11-20",
+      "headline": "US details $12bn Venezuelan oil revenue",
+      "lat": 10.5,
+      "lon": -66.9,
+      "n": 26,
+      "place": "Caracas",
+      "sources": [
+        "State Dept"
+      ]
+    },
+    {
+      "event_date": "2026-11-20",
+      "headline": "Eisenkot tapped to form Israeli government",
+      "lat": 31.8,
+      "lon": 35.2,
+      "n": 27,
+      "place": "Jerusalem",
+      "sources": [
+        "The Paris Eye"
+      ]
+    },
+    {
+      "event_date": "2026-11-20",
+      "headline": "Fire at Yunus ancestral home, Chattogram",
+      "lat": 22.35,
+      "lon": 91.8,
+      "n": 28,
+      "place": "Chattogram",
+      "sources": [
+        "CareerIndia"
+      ]
+    },
+    {
+      "event_date": "2026-11-20",
+      "headline": "Modi addresses FICCI centenary",
+      "lat": 28.5,
+      "lon": 77.6,
+      "n": 29,
+      "place": "New Delhi",
+      "sources": [
+        "CareerIndia"
+      ]
+    },
+    {
+      "event_date": "2026-11-20",
+      "headline": "German-Ukrainian business forum opens",
+      "lat": 52.5,
+      "lon": 13.4,
+      "n": 30,
+      "place": "Berlin",
+      "sources": [
+        "Chancellery"
+      ]
+    },
+    {
+      "event_date": "2026-11-20",
+      "headline": "Australian miners press Li Qiang on access",
+      "lat": 39.3,
+      "lon": 117.2,
+      "n": 31,
+      "place": "Beijing",
+      "sources": [
+        "AAP"
+      ]
+    },
+    {
+      "event_date": "2026-11-20",
+      "headline": "Italian rail strike starts 21:00 Friday",
+      "lat": 41.7,
+      "lon": 12.9,
+      "n": 32,
+      "place": "Rome",
+      "sources": [
+        "SGB",
+        "CUB"
+      ]
+    },
+    {
+      "event_date": "2026-11-20",
+      "headline": "UK retail sales: October figures due",
+      "lat": 51.3,
+      "lon": -0.5,
+      "n": 33,
+      "place": "London",
+      "sources": [
+        "ONS"
+      ]
+    },
+    {
+      "event_date": "2026-11-20",
+      "headline": "Bank of Thailand holds 2026 growth at 2.4%",
+      "lat": 13.75,
+      "lon": 100.5,
+      "n": 34,
+      "place": "Bangkok",
+      "sources": [
+        "BOT"
+      ]
+    },
+    {
+      "event_date": "2026-11-20",
+      "headline": "France braces for cost-of-living protests",
+      "lat": 48.7,
+      "lon": 2.7,
+      "n": 35,
+      "place": "Paris",
+      "sources": [
+        "The Paris Eye"
+      ]
+    },
+    {
+      "event_date": "2026-11-20",
+      "headline": "ANC weighs Gauteng power-sharing deal",
+      "lat": -26.2,
+      "lon": 28.0,
+      "n": 36,
+      "place": "Johannesburg",
+      "sources": [
+        "TimesLIVE"
+      ]
     }
   ],
   "date": "Friday, 20 November 2026",
-  "hero": {
-    "deck": "Allies agree a united position at the Berlin summit — and say they are ready to talk to Moscow",
-    "graphic": "skyline",
-    "headline": "EUROPE READY FOR TALKS WITH RUSSIA",
-    "place": "BERLIN",
-    "sources": ["BBC", "Reuters"]
-  },
+  "date_check": [
+    {
+      "text": "GTA VI launch + $2.36bn day",
+      "when": "Thu 19 Nov"
+    },
+    {
+      "text": "Anthropic first close $97.17, +17%",
+      "when": "Thu 19 Nov"
+    },
+    {
+      "text": "Senate rejects Iran war-powers 51–48",
+      "when": "Thu 19 Nov"
+    },
+    {
+      "text": "ICJ: Myanmar genocide vs Rohingya",
+      "when": "Thu 19 Nov"
+    },
+    {
+      "text": "Berlin Coalition of the Willing",
+      "when": "Thu 19 Nov"
+    },
+    {
+      "text": "Trump pardons Pete Rose",
+      "when": "Thu 19 Nov"
+    },
+    {
+      "text": "PIF Tower Riyadh hit",
+      "when": "Thu 19 Nov"
+    },
+    {
+      "text": "Crimean Bridge hit, 3rd time",
+      "when": "Thu 19 Nov"
+    },
+    {
+      "text": "Fiji drought disaster declared",
+      "when": "Wed 18 Nov"
+    },
+    {
+      "text": "IAEA: Yongbyon enrichment expands",
+      "when": "Wed 18 Nov"
+    },
+    {
+      "text": "Gemini 4 Neon launches",
+      "when": "Tue 18 Nov"
+    },
+    {
+      "text": "Voyager 1 reaches one light-day",
+      "when": "Wed 18 Nov"
+    }
+  ],
+  "footer": "Every story happened, or was first reported, on Friday 20 November 2026.",
+  "footer_sources": "Sources: Reuters, AP, AFP, BBC, The Hindu, IMD, UN News, Xinhua, NWS, PBOC, ANI. Original drawings — no photographs.",
+  "heroes": [
+    {
+      "art": "akvan",
+      "deck": "300,000 evacuated as the storm comes ashore near Gopalpur; 423 rescue teams on standby, 69 trains cancelled",
+      "event_date": "2026-11-20",
+      "headline": "CYCLONE AKVAN SLAMS INTO ODISHA",
+      "lat": 19.3,
+      "lon": 84.9,
+      "n": 1,
+      "place": "ODISHA, INDIA",
+      "sources": [
+        "IMD",
+        "The Hindu"
+      ]
+    },
+    {
+      "art": "cop31",
+      "deck": "Draft drops fossil fuels and the $120bn figure; 194 nations race the midnight deadline in Antalya",
+      "event_date": "2026-11-20",
+      "headline": "COP31'S FINAL DAY — STILL NO DEAL",
+      "lat": 36.9,
+      "lon": 30.7,
+      "n": 2,
+      "place": "ANTALYA",
+      "sources": [
+        "UN News",
+        "Reuters"
+      ]
+    },
+    {
+      "art": "ukeu",
+      "deck": "Second reset summit in Brussels: food checks scrapped, migration pact, power-market access",
+      "event_date": "2026-11-20",
+      "headline": "UK AND EU AGREE 100,000 YOUTH VISAS",
+      "lat": 50.85,
+      "lon": 4.35,
+      "n": 3,
+      "place": "BRUSSELS",
+      "sources": [
+        "The Times",
+        "Consilium"
+      ]
+    }
+  ],
   "masthead": "THE WORLD IN ONE DAY",
+  "mediums": [
+    {
+      "art": "apec",
+      "deck": "Shenzhen morning talks cap the APEC leaders' week",
+      "event_date": "2026-11-20",
+      "headline": "XI MEETS ALBANESE AND PRABOWO",
+      "lat": 22.55,
+      "lon": 114.06,
+      "n": 4,
+      "place": "SHENZHEN",
+      "sources": [
+        "Xinhua"
+      ]
+    },
+    {
+      "art": "youth",
+      "deck": "Walkouts at noon in 25+ countries; 341 UK schools and campuses",
+      "event_date": "2026-11-20",
+      "headline": "YOUTH STRIKE SWEEPS EUROPE",
+      "lat": 51.5,
+      "lon": -0.13,
+      "n": 5,
+      "place": "LONDON",
+      "sources": [
+        "The Guardian"
+      ]
+    },
+    {
+      "art": "italy",
+      "deck": "CGIL's 24-hour stoppage; ~100 marches, Rome at 09:30",
+      "event_date": "2026-11-20",
+      "headline": "ITALY STOPS FOR A GENERAL STRIKE",
+      "lat": 41.9,
+      "lon": 12.5,
+      "n": 6,
+      "place": "ROME",
+      "sources": [
+        "ANSA",
+        "CGIL"
+      ]
+    },
+    {
+      "art": "cricket",
+      "deck": "216-run stand on day two in Wellington",
+      "event_date": "2026-11-20",
+      "headline": "PHILLIPS 118, NICHOLLS 175* AS NZ MAKE 368",
+      "lat": -41.29,
+      "lon": 174.78,
+      "n": 7,
+      "place": "WELLINGTON",
+      "sources": [
+        "Reuters",
+        "AP"
+      ]
+    },
+    {
+      "art": "florida",
+      "deck": "St. Johns River at a record 18.3 ft; 100+ rescued",
+      "event_date": "2026-11-20",
+      "headline": "FLORIDA FLOODS ROLL INTO FRIDAY",
+      "lat": 28.4,
+      "lon": -80.7,
+      "n": 8,
+      "place": "FLORIDA",
+      "sources": [
+        "NWS",
+        "Florida Today"
+      ]
+    },
+    {
+      "art": "gta",
+      "deck": "Critics gave it 99; players get their say from 12:00 PT",
+      "event_date": "2026-11-20",
+      "headline": "GTA VI USER REVIEWS OPEN AT NOON",
+      "lat": 25.8,
+      "lon": -80.2,
+      "n": 9,
+      "place": "LOS SANTOS",
+      "sources": [
+        "Metacritic"
+      ]
+    },
+    {
+      "art": "markets",
+      "deck": "MSCI Asia −2.5% on the day, −7% on the week — worst since March 2020",
+      "event_date": "2026-11-20",
+      "headline": "ASIAN MARKETS ROUTED",
+      "lat": 22.32,
+      "lon": 114.16,
+      "n": 10,
+      "place": "HONG KONG",
+      "sources": [
+        "Reuters"
+      ]
+    },
+    {
+      "art": "china",
+      "deck": "1-year at 3.00%, 5-year at 3.50% — 18th month unchanged",
+      "event_date": "2026-11-20",
+      "headline": "CHINA HOLDS LENDING RATES",
+      "lat": 39.9,
+      "lon": 116.4,
+      "n": 11,
+      "place": "BEIJING",
+      "sources": [
+        "PBOC",
+        "Reuters"
+      ]
+    },
+    {
+      "art": "modi",
+      "deck": "Three-day dialogue begins at Delhi's Purana Qila",
+      "event_date": "2026-11-20",
+      "headline": "MODI OPENS SCO CIVILISATION FORUM",
+      "lat": 28.6,
+      "lon": 77.2,
+      "n": 12,
+      "place": "NEW DELHI",
+      "sources": [
+        "ANI",
+        "MEA"
+      ]
+    },
+    {
+      "art": "gaza",
+      "deck": "Strikes continue despite the ceasefire; 79 bodies in 24 hours",
+      "event_date": "2026-11-20",
+      "headline": "THREE KILLED IN GAZA OVERNIGHT",
+      "lat": 31.5,
+      "lon": 34.45,
+      "n": 13,
+      "place": "GAZA",
+      "sources": [
+        "Al Jazeera"
+      ]
+    }
+  ],
+  "not_yet": "NOT YET: COP31 final text (due midnight) · UK–EU signing (this afternoon) · Youth Strike turnout (tonight)",
+  "numbers": [
+    {
+      "label": "EVACUATED FROM ODISHA'S COAST",
+      "value": "300,000"
+    },
+    {
+      "label": "YOUTH VISAS A YEAR, UK-EU DEAL",
+      "value": "100,000"
+    },
+    {
+      "label": "RUNS — PHILLIPS, WELLINGTON",
+      "value": "118"
+    },
+    {
+      "label": "COUNTRIES IN YOUTH STRIKE",
+      "value": "25+"
+    },
+    {
+      "label": "MSCI ASIA-PACIFIC, THIS WEEK",
+      "value": "−7%"
+    },
+    {
+      "label": "NATIONS AT COP31, ANTALYA",
+      "value": "194"
+    }
+  ],
   "regions": {
-    "AMERICAS": [
-      {
-        "deck": "Late baseball legend cleared posthumously",
-        "headline": "Trump pardons Pete Rose",
-        "sources": ["BBC"]
-      },
-      {
-        "deck": "Staff struggled to find a vein, witnesses say",
-        "headline": "Texas botches execution of Reinaldo Dennes",
-        "sources": ["The Guardian"]
-      },
-      {
-        "deck": "Detonation plan halted after public outcry",
-        "headline": "US Army postpones chemical blast plan",
-        "sources": ["The Guardian"]
-      },
-      {
-        "deck": "Crime-crackdown president seeks another term",
-        "headline": "Bukele set to formalise third-term bid",
-        "sources": ["Al Jazeera"]
-      },
-      {
-        "deck": "Job posting points to agent that runs your Mac",
-        "headline": "Apple building its own AI agent",
-        "sources": ["TechCrunch", "Engadget"]
-      }
-    ],
-    "ASIA-PACIFIC": [
-      {
-        "deck": "Core CPI 2.2% in October; December hike expected",
-        "headline": "Japan inflation cements rate-hike case",
-        "sources": ["Reuters"]
-      },
-      {
-        "deck": "One-year 3.00%, five-year 3.50% — 18th month on hold",
-        "headline": "China holds lending rates steady",
-        "sources": ["Reuters"]
-      },
-      {
-        "deck": "6,310 arrested; $116m frozen in online gambling swoop",
-        "headline": "South Korea smashes gambling rings",
-        "sources": ["GGRAsia"]
-      },
-      {
-        "deck": "113 not out on day one at Basin Reserve",
-        "headline": "Nicholls century anchors New Zealand",
-        "sources": ["JagranJosh"]
-      },
-      {
-        "deck": "Centenary convention opens in New Delhi",
-        "headline": "Modi inaugurates FICCI centenary",
-        "sources": ["JagranJosh"]
-      }
-    ],
-    "EUROPE": [
-      {
-        "deck": "Burnham meets Costa and von der Leyen in Brussels",
-        "headline": "UK-EU summit opens in Brussels",
-        "sources": ["CRN Times"]
-      },
-      {
-        "deck": "Walkouts in 18 countries: 'Fight for our future'",
-        "headline": "Youth strike sweeps Europe",
-        "sources": ["IPB", "ZeroFox"]
-      },
-      {
-        "deck": "Secret operation locks down smart appliances",
-        "headline": "Thousands of UK fridges secured from hackers",
-        "sources": ["BBC"]
-      },
-      {
-        "deck": "Judge rules on child abuse charges",
-        "headline": "Thomas Markle fit to stand trial",
-        "sources": ["BBC"]
-      },
-      {
-        "deck": "Does ethnicity change how we experience death?",
-        "headline": "The unequal end of life",
-        "sources": ["BBC"]
-      }
-    ],
-    "MIDDLE EAST & AFRICA": [
-      {
-        "deck": "Brent $92.22 as Houthi attacks hit Riyadh",
-        "headline": "Oil rises on Riyadh attacks",
-        "sources": ["Reuters"]
-      },
-      {
-        "deck": "Migrant arrivals in Canary Islands up by two-thirds",
-        "headline": "Four bodies after Senegal boat capsizes",
-        "sources": ["Al Jazeera"]
-      },
-      {
-        "deck": "Seven people trapped in Taiz speak to the BBC",
-        "headline": "'It's just fireworks': life under siege in Taiz",
-        "sources": ["BBC"]
-      },
-      {
-        "deck": "AI data centres drive emissions up",
-        "headline": "Meta rethinks 2030 climate goals",
-        "sources": ["Al Jazeera"]
-      }
-    ]
+    "AFRICA": 1,
+    "AMERICAS": 4,
+    "ASIA-PACIFIC": 13,
+    "EUROPE": 10,
+    "MIDEAST": 4,
+    "OCEANIA": 2,
+    "WORLD": 2
   },
-  "top": [
+  "subline": "Cyclone Akvan strikes Odisha  ·  COP31 enters its final day  ·  Britain and the EU agree a reset",
+  "timeline": [
     {
-      "deck": "24.5m copies, about $2.36bn — biggest launch ever",
-      "headline": "GTA VI SMASHES RECORDS WITH $2.36BN DAY",
-      "sources": ["BBC", "Reuters"]
+      "time": "00:07",
+      "text": "Xavier bulletin"
     },
     {
-      "deck": "MSCI Asia-Pacific down 7% on the week; Nikkei -4.1%",
-      "headline": "Asian shares head for worst week since 2020",
-      "sources": ["Reuters"]
+      "time": "01:15",
+      "text": "China holds rates"
     },
     {
-      "deck": "Landfall near Gopalpur; 300,000 evacuated",
-      "headline": "CYCLONE AKVAN HITS INDIA'S EAST COAST",
-      "sources": ["IMD", "Daily Jagran"]
+      "time": "06:30",
+      "text": "Akvan ashore"
     },
     {
-      "deck": "Telegraph front page after the Shenzhen summit",
-      "headline": "Trump tells Europe: stop funding Ukraine war",
-      "sources": ["The Telegraph"]
+      "time": "10:30",
+      "text": "UK-EU summit opens"
     },
     {
-      "deck": "Europe says use what is already pledged",
-      "headline": "COP31: Africa demands more climate cash",
-      "sources": ["BBC"]
+      "time": "12:00",
+      "text": "Youth Strike walkouts"
     },
     {
-      "deck": "Seven founders cashed out in record IPO",
-      "headline": "Anthropic founders bank nearly $2bn",
-      "sources": ["TechCrunch"]
-    },
-    {
-      "deck": "Fire in Obolonskyi district after missile debris strike",
-      "headline": "Kyiv hit as missile debris sets building ablaze",
-      "sources": ["Reuters"]
-    },
-    {
-      "deck": "Index near 103.9; yen 159.50; sterling near one-year low",
-      "headline": "Dollar nears 19-month peak as AI jitters spread",
-      "sources": ["Reuters"]
+      "time": "12:00 PT",
+      "text": "GTA VI reviews open"
     }
   ]
 }
