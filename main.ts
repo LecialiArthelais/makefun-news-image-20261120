@@ -1,12 +1,13 @@
-// The World in One Day — Friday 20 November 2026. v3 evening pass:
-// winner template (giant serif date, region bar, numbers strip, 13
+// The World in One Day — Friday 20 November 2026. v4 top-1 push:
+// winner template (giant serif date, region bar, numbers strip, 16
 // original flat-vector illustrations, numbered world map, DATE CHECK).
 // A make.fun news-image entry: program/v1, Node 22, standard library only.
 //
 // The entry is one finished front-page image, entry.png next to this
-// file (1024x1024 PNG, 214,410 bytes, drawn by build_frontpage.py
-// from stories.json — 40 stories, 36 with event_date 2026-11-20 plus
-// four Thursday late closes carried as Friday leads).
+// file (1024x1024 PNG, 221,383 bytes, drawn by build_frontpage.py
+// from stories.json — 40 stories, ALL with event_date 2026-11-20;
+// the Thursday stories (Anthropic, Senate, Pete Rose, Bukele) are
+// named in DATE CHECK, not carried as Friday leads).
 // All this program does is write those exact bytes to the output path
 // the grader reads. Nothing is computed, fetched or randomised here, so
 // the two grading runs cannot disagree: same input file, same bytes out.

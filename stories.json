@@ -2,13 +2,24 @@
   "also": [
     {
       "event_date": "2026-11-20",
-      "headline": "ASIAN MARKETS ROUTED",
-      "lat": 22.32,
-      "lon": 114.16,
+      "headline": "BRENT $92.67 AS HORMUZ TANKERS HIT MINES",
+      "lat": 26.5,
+      "lon": 56.3,
       "n": 14,
-      "place": "HONG KONG",
+      "place": "HORMUZ",
       "sources": [
         "Reuters"
+      ]
+    },
+    {
+      "event_date": "2026-11-20",
+      "headline": "KENYA STARTS DRILLING FIRST OIL WELL",
+      "lat": 3.0,
+      "lon": 36.0,
+      "n": 15,
+      "place": "TURKANA",
+      "sources": [
+        "Energy Ministry"
       ]
     },
     {
@@ -16,23 +27,11 @@
       "headline": "CHINA HOLDS LENDING RATES",
       "lat": 39.9,
       "lon": 116.4,
-      "n": 15,
+      "n": 16,
       "place": "BEIJING",
       "sources": [
         "PBOC",
         "Reuters"
-      ]
-    },
-    {
-      "event_date": "2026-11-20",
-      "headline": "MODI OPENS SCO CIVILISATION FORUM",
-      "lat": 28.6,
-      "lon": 77.2,
-      "n": 16,
-      "place": "NEW DELHI",
-      "sources": [
-        "ANI",
-        "MEA"
       ]
     },
     {
@@ -148,9 +147,9 @@
     },
     {
       "event_date": "2026-11-20",
-      "headline": "Xi meets Prabowo in Shenzhen",
-      "lat": 22.4,
-      "lon": 114.4,
+      "headline": "Xi meets Albanese and Prabowo in Shenzhen",
+      "lat": 22.55,
+      "lon": 114.06,
       "n": 27,
       "place": "Shenzhen",
       "sources": [
@@ -220,7 +219,7 @@
       "n": 33,
       "place": "New Delhi",
       "sources": [
-        "CareerIndia"
+        "PMO"
       ]
     },
     {
@@ -305,6 +304,22 @@
   "date": "Friday, 20 November 2026",
   "date_check": [
     {
+      "text": "Anthropic's $83 IPO & Nasdaq debut",
+      "when": "Thu 19 Nov"
+    },
+    {
+      "text": "Senate rejects Iran war powers, 48–51",
+      "when": "Thu 19 Nov"
+    },
+    {
+      "text": "Pete Rose pardoned",
+      "when": "Thu 19 Nov"
+    },
+    {
+      "text": "Bukele registers for third term",
+      "when": "Thu 19 Nov"
+    },
+    {
       "text": "GTA VI launch + $2.36bn day",
       "when": "Thu 19 Nov"
     },
@@ -317,29 +332,31 @@
       "when": "Thu 19 Nov"
     },
     {
-      "text": "Crimean Bridge hit, 3rd time",
+      "text": "Crimean Bridge rail hit, 3rd attack",
       "when": "Thu 19 Nov"
     },
     {
       "text": "Fiji drought disaster declared",
       "when": "Wed 18 Nov"
-    },
-    {
-      "text": "IAEA: Yongbyon enrichment expands",
-      "when": "Wed 18 Nov"
-    },
-    {
-      "text": "Gemini 4 Neon launches",
-      "when": "Tue 18 Nov"
-    },
-    {
-      "text": "Voyager 1 reaches one light-day",
-      "when": "Wed 18 Nov"
     }
   ],
-  "footer": "Every story happened, or was first reported, on Friday 20 November 2026 — Thursday's late closes carried as Friday leads.",
+  "footer": "Every story happened, or was first reported, on Friday 20 November 2026.",
   "footer_sources": "Sources: Reuters, AP, AFP, BBC, The Hindu, IMD, UN News, Xinhua, NWS, PBOC, ANI. Original drawings — no photographs.",
   "heroes": [
+    {
+      "art": "kyiv",
+      "deck": "About 110 missiles and 400 drones kill at least eight across Ukraine; power and water cut in the capital",
+      "event_date": "2026-11-20",
+      "headline": "RUSSIAN MISSILES HIT THREE KYIV BRIDGES",
+      "lat": 50.45,
+      "lon": 30.52,
+      "n": 1,
+      "place": "KYIV",
+      "sources": [
+        "Reuters",
+        "Kyiv Independent"
+      ]
+    },
     {
       "art": "akvan",
       "deck": "370,000 evacuated as Akvan comes ashore; no deaths or major damage reported",
@@ -347,11 +364,42 @@
       "headline": "CYCLONE AKVAN SLAMS INTO ODISHA",
       "lat": 19.3,
       "lon": 84.9,
-      "n": 1,
+      "n": 2,
       "place": "ODISHA, INDIA",
       "sources": [
         "IMD",
         "The Hindu"
+      ]
+    },
+    {
+      "art": "markets",
+      "deck": "Taiex −6.2% · Nikkei −5.1% · Kospi −5.2% · Hang Seng −1.9% as chip stocks plunge on AI fears",
+      "event_date": "2026-11-20",
+      "headline": "AI SELL-OFF SINKS ASIA'S MARKETS",
+      "lat": 25.03,
+      "lon": 121.56,
+      "n": 3,
+      "place": "TAIPEI",
+      "sources": [
+        "Reuters",
+        "CNBC"
+      ]
+    }
+  ],
+  "masthead": "THE WORLD IN ONE DAY",
+  "mediums": [
+    {
+      "art": "ukeu",
+      "deck": "100,000 youth visas a year; food checks scrapped and carbon markets linked",
+      "event_date": "2026-11-20",
+      "headline": "UK AND EU SIGN RESET DEAL",
+      "lat": 50.85,
+      "lon": 4.35,
+      "n": 4,
+      "place": "BRUSSELS",
+      "sources": [
+        "Reuters",
+        "The Times"
       ]
     },
     {
@@ -361,7 +409,7 @@
       "headline": "COP31'S FINAL DAY — STILL NO DEAL",
       "lat": 36.9,
       "lon": 30.7,
-      "n": 2,
+      "n": 5,
       "place": "ANTALYA",
       "sources": [
         "UN News",
@@ -369,86 +417,42 @@
       ]
     },
     {
-      "art": "ukeu",
-      "deck": "100,000 youth visas a year; food checks scrapped and carbon markets linked",
+      "art": "poland",
+      "deck": "Kh-101 down near Nowy Lipowiec; two more objects fall, no one hurt; Rzeszów airport pauses",
       "event_date": "2026-11-20",
-      "headline": "UK AND EU SIGN RESET DEAL",
-      "lat": 50.85,
-      "lon": 4.35,
-      "n": 3,
-      "place": "BRUSSELS",
+      "headline": "RUSSIAN MISSILES LAND IN POLAND",
+      "lat": 50.55,
+      "lon": 22.7,
+      "n": 6,
+      "place": "POLAND",
       "sources": [
-        "Reuters",
-        "The Times"
-      ]
-    }
-  ],
-  "masthead": "THE WORLD IN ONE DAY",
-  "mediums": [
-    {
-      "art": "anthropic",
-      "deck": "Shares end 17% up on debut after the $83 IPO",
-      "event_date": "2026-11-19",
-      "headline": "ANTHROPIC CLOSES AT $97.17, UP 17%",
-      "lat": 40.7,
-      "lon": -74.0,
-      "n": 4,
-      "place": "NEW YORK",
-      "sources": [
-        "Reuters",
-        "Finnhub"
-      ]
-    },
-    {
-      "art": "senate",
-      "deck": "Fails 51–48 as three Republicans break ranks",
-      "event_date": "2026-11-19",
-      "headline": "SENATE BACKS TRUMP ON IRAN WAR POWERS",
-      "lat": 38.9,
-      "lon": -77.0,
-      "n": 5,
-      "place": "WASHINGTON",
-      "sources": [
-        "Reuters"
+        "Polish Defence Ministry"
       ]
     },
     {
       "art": "berlin",
       "deck": "Merz says talks yes, Moscow no — neutral venue only",
-      "event_date": "2026-11-19",
+      "event_date": "2026-11-20",
       "headline": "EUROPE READY FOR TALKS WITH RUSSIA",
       "lat": 52.5,
       "lon": 13.4,
-      "n": 6,
+      "n": 7,
       "place": "BERLIN",
       "sources": [
         "Reuters"
       ]
     },
     {
-      "art": "baseball",
-      "deck": "Trump clears the late hits king, 4,256 hits, for tax crimes",
-      "event_date": "2026-11-19",
-      "headline": "PETE ROSE PARDONED",
-      "lat": 39.1,
-      "lon": -84.5,
-      "n": 7,
-      "place": "CINCINNATI",
+      "art": "iraq",
+      "deck": "Forces deploy in Jurf al-Sakhar as Kataib Hezbollah agrees to withdraw",
+      "event_date": "2026-11-20",
+      "headline": "IRAQ'S ARMY MOVES INTO MILITIA STRONGHOLD",
+      "lat": 32.9,
+      "lon": 44.3,
+      "n": 8,
+      "place": "JURF AL-SAKHAR",
       "sources": [
         "Reuters"
-      ]
-    },
-    {
-      "art": "apec",
-      "deck": "Shenzhen morning talks cap the APEC leaders' week",
-      "event_date": "2026-11-20",
-      "headline": "XI MEETS ALBANESE AND PRABOWO",
-      "lat": 22.55,
-      "lon": 114.06,
-      "n": 8,
-      "place": "SHENZHEN",
-      "sources": [
-        "Xinhua"
       ]
     },
     {
@@ -520,47 +524,47 @@
       ]
     }
   ],
-  "not_yet": "NOT YET: COP31 final text (talks running past midnight) · ATP Finals results (late Friday) · Harris–Macron readout",
+  "not_yet": "NOT YET: BepiColombo Mercury orbit entry (Sat 21 Nov, planned) · COP31 final text (talks running past midnight) · ATP Finals results (late Friday) · Harris–Macron readout",
   "numbers": [
+    {
+      "label": "BRIDGES HIT IN KYIV",
+      "value": "3"
+    },
     {
       "label": "EVACUATED FROM ODISHA'S COAST",
       "value": "370,000"
     },
     {
-      "label": "ANTHROPIC FIRST CLOSE, +17%",
-      "value": "$97.17"
-    },
-    {
-      "label": "SENATE REJECTS IRAN WAR POWERS",
-      "value": "51–48"
-    },
-    {
-      "label": "RUNS — PHILLIPS, WELLINGTON",
-      "value": "118"
+      "label": "TAIEX, FRIDAY'S CLOSE",
+      "value": "−6.2%"
     },
     {
       "label": "YOUTH VISAS A YEAR, UK-EU DEAL",
       "value": "100,000"
     },
     {
-      "label": "NATIONS AT COP31, ANTALYA",
-      "value": "194"
+      "label": "JAPAN INFLATION, OCTOBER",
+      "value": "2.3%"
+    },
+    {
+      "label": "RUNS — PHILLIPS, WELLINGTON",
+      "value": "118"
     }
   ],
   "regions": {
-    "AFRICA": 1,
-    "AMERICAS": 7,
-    "ASIA-PACIFIC": 13,
-    "EUROPE": 11,
-    "MIDEAST": 4,
+    "AFRICA": 2,
+    "AMERICAS": 5,
+    "ASIA-PACIFIC": 11,
+    "EUROPE": 14,
+    "MIDEAST": 5,
     "OCEANIA": 2,
-    "WORLD": 2
+    "WORLD": 1
   },
-  "subline": "Cyclone Akvan strikes Odisha  ·  COP31 enters its final day  ·  Britain and the EU sign a reset",
+  "subline": "Kyiv's bridges hit  ·  Cyclone Akvan strikes Odisha  ·  Asia's markets plunge on AI fears",
   "timeline": [
     {
-      "text": "Anthropic closes +17%",
-      "time": "04:00"
+      "text": "Kyiv barrage begins",
+      "time": "01:25"
     },
     {
       "text": "Akvan ashore",

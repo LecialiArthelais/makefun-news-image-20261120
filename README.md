@@ -10,10 +10,10 @@ page rebuilt from scratch on the winner template: a giant serif date,
 a coloured region bar, a numbers strip, three illustrated heroes, ten
 illustrated medium cards, a numbered world map, and a DATE CHECK box
 naming the big stories that happened *before* Friday. 40 stories in
-all: 36 verified by event date, plus four Thursday late closes —
-Anthropic's first close, the Senate war-powers vote, the Berlin talks
-and the Pete Rose pardon — carried as the Friday paper's leads, the
-way the day's papers do (see DESIGN.md).
+all, every one verified by event date as Friday 20 November 2026 —
+the Thursday stories (Anthropic's debut, the Senate war-powers vote,
+the Pete Rose pardon, Bukele's third-term registration) are named in
+DATE CHECK, not carried as leads (see DESIGN.md).
 
 The build keeps the recipe of the 19 November page (judge 98.01%, rank
 860/10,754): a date nobody can miss, capitalised hero headlines, flat
@@ -26,20 +26,24 @@ numbered map, and a DATE CHECK box.
 
 ## The day, in 40 stories
 
-- **Heroes:** Cyclone Akvan slams into Odisha (370,000 evacuated, no
-  deaths reported); COP31's final day — still no deal; UK and EU sign
-  a reset deal (100,000 youth visas a year).
-- **Medium cards:** Anthropic closes at $97.17, up 17%; Senate backs
-  Trump on Iran war powers (51–48); Europe ready for talks with
-  Russia; Pete Rose pardoned; Xi meets Albanese and Prabowo in
-  Shenzhen; youth strike sweeps Europe (25+ countries, 400+ UK
-  schools); Italy stops for a general strike; Phillips 118, Nicholls
-  175\* as NZ make 368; Florida floods roll into Friday (St. Johns
-  River at a record 18.3 ft); GTA VI user reviews open at noon.
-- **Also today (14–40):** Asian markets routed; China holds lending
-  rates; Modi opens the SCO Civilisation Forum; three killed in Gaza
-  overnight; Japan core inflation 2.2%; Harris meets Macron; Trump
-  White House press conference; Portugal's public-sector strike; ATP
+- **Heroes:** Russian missiles hit three Kyiv bridges (about 110
+  missiles and 400 drones, at least eight killed across Ukraine);
+  Cyclone Akvan slams into Odisha (370,000 evacuated, no deaths
+  reported); AI sell-off sinks Asia's markets (Taiex −6.2%, Nikkei
+  −5.1%, Kospi −5.2%, Hang Seng −1.9%).
+- **Medium cards:** UK and EU sign a reset deal (100,000 youth visas
+  a year); COP31's final day — still no deal; Russian missiles land
+  in Poland; Europe ready for talks with Russia; Iraq's army moves
+  into a militia stronghold; youth strike sweeps Europe (25+
+  countries, 400+ UK schools); Italy stops for a general strike;
+  Phillips 118, Nicholls 175\* as NZ make 368; Florida floods roll
+  into Friday (St. Johns River at a record 18.3 ft); GTA VI user
+  reviews open at noon.
+- **Also today (14–40):** Brent $92.67 as Hormuz tankers hit mines;
+  Kenya starts drilling its first oil well; China holds lending rates;
+  three killed in Gaza overnight; Japan core inflation 2.2%; Harris
+  meets Macron; Trump White House press conference; Portugal's
+  public-sector strike; ATP
   Finals in Turin; World Children's Day; Cyclone Xavier weakens off
   the Cook Islands; Fed's Paulson speaks; Albanese to meet Li Qiang;
   Xi meets Prabowo; Taiwan steadies stocks; four nations demand Gaza
@@ -50,12 +54,14 @@ numbered map, and a DATE CHECK box.
   0.7% in October; Bank of Thailand holds growth at 2.4%; France
   braces for cost-of-living protests; ANC weighs a Gauteng
   power-sharing deal.
-- **DATE CHECK — not Friday:** GTA VI launch + $2.36bn day (Thu 19
-  Nov); ICJ Rohingya genocide ruling (Thu 19 Nov); PIF Tower Riyadh
-  hit (Thu 19 Nov); Crimean Bridge hit a third time (Thu 19 Nov);
-  Fiji drought disaster declared (Wed 18 Nov); IAEA Yongbyon report
-  (Wed 18 Nov); Gemini 4 Neon launches (Tue 18 Nov); Voyager 1
-  reaches one light-day (Wed 18 Nov).
+- **DATE CHECK — not Friday:** Anthropic's $83 IPO & Nasdaq debut
+  (Thu 19 Nov); Senate rejects Iran war powers, 48–51 (Thu 19 Nov);
+  Pete Rose pardoned (Thu 19 Nov); Bukele registers for a third term
+  (Thu 19 Nov); GTA VI launch + $2.36bn day (Thu 19 Nov); ICJ
+  Rohingya genocide ruling (Thu 19 Nov); PIF Tower Riyadh hit (Thu
+  19 Nov); Crimean Bridge rail hit, 3rd attack (Thu 19 Nov); Fiji
+  drought disaster declared (Wed 18 Nov). NOT YET: BepiColombo
+  Mercury orbit entry (Sat 21 Nov, planned).
 
 Every story was verified against reports of the day (two sources where
 possible); the full list with sources and event dates is in

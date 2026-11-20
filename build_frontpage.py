@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Render the 20 November 2026 front page, v3 — evening pass.
+"""Render the 20 November 2026 front page, v4 — top-1 push.
 
-Reads stories.json (40 stories: 36 with event_date 2026-11-20, plus
-four Thursday late closes — Anthropic, Senate, Berlin, Pete Rose —
-carried as the Friday paper's lead stories, the way the day's papers
-do) and draws a 1024x1024 newspaper front page with Pillow:
+Reads stories.json (40 stories, ALL with event_date 2026-11-20:
+Kyiv bridges as hero #1, Akvan #2, the AI sell-off #3; Anthropic,
+the Senate vote, Pete Rose and Bukele demoted to DATE CHECK as
+Thursday stories, per the gap analysis of the new top-5) and draws
+a 1024x1024 newspaper front page with Pillow:
 cream paper, navy ribbon, a giant serif date masthead, a coloured region
 bar, a THE DAY IN NUMBERS strip, a FRIDAY BY THE HOURS timeline, three
 illustrated hero cards, ten illustrated medium cards, a dark-blue world
@@ -54,13 +55,13 @@ GREEN = (64, 110, 66)
 PLUM = (110, 70, 120)
 
 REGION_COLOURS = [
-    ("EUROPE", 11, (36, 64, 110)),
-    ("ASIA-PACIFIC", 13, RED),
-    ("AMERICAS", 7, (176, 124, 28)),
-    ("MIDEAST", 4, PLUM),
-    ("AFRICA", 1, GREEN),
+    ("EUROPE", 14, (36, 64, 110)),
+    ("ASIA-PACIFIC", 11, RED),
+    ("AMERICAS", 5, (176, 124, 28)),
+    ("MIDEAST", 5, PLUM),
+    ("AFRICA", 2, GREEN),
     ("OCEANIA", 2, TEAL),
-    ("WORLD", 2, GREY),
+    ("WORLD", 1, GREY),
 ]
 
 # --- Type roles: (font file, point size) ----------------------------------
@@ -230,7 +231,7 @@ def art_cop31(draw, x, y, w, h):
 
 
 def art_ukeu(draw, x, y, w, h):
-    """UK-EU reset: gold stars in a circle beside a Union Jack."""
+    """UK-EU reset: gold stars in a circle beside a proper Union Jack."""
     draw.rectangle([x, y, x + w, y + h], fill=NAVY)
     m = min(w, h)
     cx, cy, r = x + w * 0.30, y + h * 0.5, m * 0.34
@@ -238,18 +239,28 @@ def art_ukeu(draw, x, y, w, h):
         a = math.radians(i * 30 - 90)
         star4(draw, cx + r * math.cos(a), cy + r * math.sin(a),
               max(2, m * 0.035), GOLD)
-    # Union Jack, simplified: blue field, white saltire, red cross.
+    # Union Jack: deep-blue field, white saltire, red saltire,
+    # white cross, red cross — the full flag, not St George alone.
     fx0, fy0 = x + w * 0.58, y + h * 0.28
     fw, fh = w * 0.34, h * 0.44
-    draw.rectangle([fx0, fy0, fx0 + fw, fy0 + fh], fill=(200, 210, 225))
-    draw.polygon([(fx0, fy0), (fx0 + fw * 0.18, fy0),
-                  (fx0 + fw, fy0 + fh), (fx0 + fw * 0.82, fy0 + fh)],
+    draw.rectangle([fx0, fy0, fx0 + fw, fy0 + fh], fill=(36, 64, 110))
+    draw.polygon([(fx0, fy0), (fx0 + fw * 0.16, fy0),
+                  (fx0 + fw, fy0 + fh), (fx0 + fw * 0.84, fy0 + fh)],
                  fill=WHITE)
-    draw.polygon([(fx0 + fw, fy0), (fx0 + fw * 0.82, fy0),
-                  (fx0, fy0 + fh), (fx0 + fw * 0.18, fy0 + fh)], fill=WHITE)
-    draw.rectangle([fx0 + fw * 0.44, fy0, fx0 + fw * 0.56, fy0 + fh],
-                   fill=RED)
+    draw.polygon([(fx0 + fw, fy0), (fx0 + fw * 0.84, fy0),
+                  (fx0, fy0 + fh), (fx0 + fw * 0.16, fy0 + fh)], fill=WHITE)
+    draw.polygon([(fx0, fy0), (fx0 + fw * 0.10, fy0),
+                  (fx0 + fw, fy0 + fh), (fx0 + fw * 0.90, fy0 + fh)],
+                 fill=RED)
+    draw.polygon([(fx0 + fw, fy0), (fx0 + fw * 0.90, fy0),
+                  (fx0, fy0 + fh), (fx0 + fw * 0.10, fy0 + fh)], fill=RED)
+    draw.rectangle([fx0, fy0 + fh * 0.33, fx0 + fw, fy0 + fh * 0.67],
+                   fill=WHITE)
+    draw.rectangle([fx0 + fw * 0.40, fy0, fx0 + fw * 0.60, fy0 + fh],
+                   fill=WHITE)
     draw.rectangle([fx0, fy0 + fh * 0.40, fx0 + fw, fy0 + fh * 0.60],
+                   fill=RED)
+    draw.rectangle([fx0 + fw * 0.44, fy0, fx0 + fw * 0.56, fy0 + fh],
                    fill=RED)
     draw.rectangle([fx0, fy0, fx0 + fw, fy0 + fh], outline=WHITE, width=1)
 
@@ -424,7 +435,7 @@ def art_gta(draw, x, y, w, h):
 
 
 def art_markets(draw, x, y, w, h):
-    """Asian markets rout: a red chart falling off a cliff, −7%."""
+    """AI sell-off: a red chart falling off a cliff, Taiex −6.2%."""
     draw.rectangle([x, y, x + w, y + h], fill=(240, 234, 222))
     # Grid lines.
     for i in range(1, 4):
@@ -443,7 +454,7 @@ def art_markets(draw, x, y, w, h):
         face = ImageFont.truetype(
             os.path.join(FONT_DIR, "InstrumentSans-Bold.ttf"),
             max(14, int(h * 0.30)))
-        draw.text((x + w * 0.06, y + h * 0.06), "−7%", font=face, fill=RED)
+        draw.text((x + w * 0.06, y + h * 0.58), "−6.2%", font=face, fill=RED)
 
 
 def art_china(draw, x, y, w, h):
@@ -625,6 +636,116 @@ def art_baseball(draw, x, y, w, h):
         draw.line([(sx - 3, sy), (sx + 3, sy)], fill=RED, width=2)
 
 
+def art_kyiv(draw, x, y, w, h):
+    """Kyiv bridges: a Dnipro bridge at night, missile trails above,
+    fire glowing on the far bank."""
+    draw.rectangle([x, y, x + w, y + h], fill=(16, 24, 44))
+    # Stars.
+    for sx, sy in [(0.12, 0.14), (0.30, 0.08), (0.52, 0.18), (0.70, 0.10),
+                   (0.86, 0.20), (0.44, 0.06)]:
+        star4(draw, x + w * sx, y + h * sy, max(1, min(w, h) * 0.02),
+              (235, 240, 245))
+    # Missile trails: orange streaks arcing down.
+    for i, (tx0, ty0, tx1, ty1) in enumerate([
+            (0.08, 0.10, 0.42, 0.52), (0.30, 0.06, 0.58, 0.48),
+            (0.62, 0.12, 0.84, 0.55)]):
+        draw.line([(x + w * tx0, y + h * ty0), (x + w * tx1, y + h * ty1)],
+                  fill=(232, 122, 42), width=max(2, int(min(w, h) * 0.04)))
+        draw.ellipse([x + w * tx1 - 3, y + h * ty1 - 3,
+                      x + w * tx1 + 3, y + h * ty1 + 3],
+                     fill=(250, 220, 130))
+    # The river, bottom third.
+    draw.rectangle([x, y + h * 0.72, x + w, y + h], fill=(38, 90, 140))
+    draw.line([(x + w * 0.10, y + h * 0.82), (x + w * 0.40, y + h * 0.82)],
+              fill=(235, 240, 245), width=1)
+    draw.line([(x + w * 0.60, y + h * 0.90), (x + w * 0.90, y + h * 0.90)],
+              fill=(235, 240, 245), width=1)
+    # Bridge: deck + two arches + cables across the river.
+    bx0, by0 = x + w * 0.06, y + h * 0.58
+    bw, bh = w * 0.88, h * 0.16
+    draw.rectangle([bx0, by0, bx0 + bw, by0 + bh], fill=(240, 234, 220))
+    for i in range(2):
+        ax0 = bx0 + bw * (0.08 + i * 0.48)
+        draw.arc([ax0, by0 - bh * 1.1, ax0 + bw * 0.36, by0 + bh * 0.9],
+                 180, 360, fill=(240, 234, 220),
+                 width=max(2, int(min(w, h) * 0.04)))
+    for i in range(5):
+        cxp = bx0 + bw * (0.12 + i * 0.19)
+        draw.line([(cxp, by0), (cxp, by0 - bh * 0.55)],
+                  fill=(240, 234, 220), width=1)
+    # Fire glow on the far bank, right.
+    fx, fy, fr = x + w * 0.82, y + h * 0.60, min(w, h) * 0.10
+    draw.ellipse([fx - fr, fy - fr, fx + fr, fy + fr], fill=(232, 122, 42))
+    draw.ellipse([fx - fr * 0.55, fy - fr * 0.55, fx + fr * 0.55,
+                  fy + fr * 0.55], fill=(250, 220, 130))
+    # Smoke column rising from the fire.
+    for i, r in enumerate([0.04, 0.06, 0.08]):
+        draw.ellipse([fx + min(w, h) * (0.02 + i * 0.03) - min(w, h) * r,
+                      fy - h * (0.10 + i * 0.10) - min(w, h) * r,
+                      fx + min(w, h) * (0.02 + i * 0.03) + min(w, h) * r,
+                      fy - h * (0.10 + i * 0.10) + min(w, h) * r],
+                     fill=(110, 110, 120))
+
+
+def art_poland(draw, x, y, w, h):
+    """Poland incursion: a cruise missile over green fields at dawn."""
+    draw.rectangle([x, y, x + w, y + h], fill=(222, 214, 190))
+    # Dawn sky band.
+    draw.rectangle([x, y, x + w, y + h * 0.42], fill=(214, 178, 120))
+    # Missile with a white smoke trail, diagonal.
+    mx0, my0 = x + w * 0.12, y + h * 0.30
+    mx1, my1 = x + w * 0.72, y + h * 0.16
+    draw.line([(mx0, my0), (mx1, my1)], fill=(240, 234, 220),
+              width=max(3, int(min(w, h) * 0.05)))
+    draw.line([(mx0, my0), (mx0 - w * 0.08, my0 + h * 0.06)],
+              fill=(200, 196, 186), width=max(2, int(min(w, h) * 0.03)))
+    draw.polygon([(mx1, my1 - h * 0.05), (mx1 + w * 0.08, my1),
+                  (mx1, my1 + h * 0.05)], fill=(120, 110, 100))
+    # Fields: green strips with furrows.
+    draw.rectangle([x, y + h * 0.42, x + w, y + h], fill=(96, 140, 88))
+    for i in range(4):
+        fy = y + h * (0.52 + i * 0.12)
+        draw.line([(x, fy), (x + w, fy)], fill=(64, 110, 66), width=2)
+    # Pine trees along the field edge.
+    for i in range(4):
+        tx = x + w * (0.10 + i * 0.22)
+        draw.polygon([(tx, y + h * 0.42), (tx + w * 0.05, y + h * 0.24),
+                      (tx + w * 0.10, y + h * 0.42)], fill=(40, 80, 50))
+    # A small farmhouse, bottom-right.
+    hx0, hy0 = x + w * 0.68, y + h * 0.72
+    draw.rectangle([hx0, hy0, hx0 + w * 0.16, hy0 + h * 0.16],
+                   fill=(240, 234, 220))
+    draw.polygon([(hx0 - w * 0.02, hy0), (hx0 + w * 0.08, hy0 - h * 0.10),
+                  (hx0 + w * 0.18, hy0)], fill=(150, 60, 44))
+
+
+def art_iraq(draw, x, y, w, h):
+    """Iraq: desert sand, a minaret, and the red-white-black flag."""
+    draw.rectangle([x, y, x + w, y + h], fill=(238, 222, 190))
+    # Sun.
+    sx, sy, sr = x + w * 0.78, y + h * 0.22, min(w, h) * 0.11
+    draw.ellipse([sx - sr, sy - sr, sx + sr, sy + sr], fill=(232, 122, 42))
+    # Minaret silhouette, left.
+    mx0 = x + w * 0.14
+    draw.rectangle([mx0, y + h * 0.30, mx0 + w * 0.10, y + h * 0.92],
+                   fill=(120, 100, 80))
+    draw.polygon([(mx0 - w * 0.01, y + h * 0.30),
+                  (mx0 + w * 0.05, y + h * 0.16),
+                  (mx0 + w * 0.11, y + h * 0.30)], fill=(120, 100, 80))
+    draw.rectangle([mx0 - w * 0.02, y + h * 0.44, mx0 + w * 0.12,
+                    y + h * 0.48], fill=(100, 84, 66))
+    # Ground.
+    draw.rectangle([x, y + h * 0.92, x + w, y + h], fill=(214, 176, 128))
+    # Iraqi flag: red over white over black, on a pole right.
+    fx0, fy0 = x + w * 0.52, y + h * 0.34
+    fw, fh = w * 0.34, h * 0.42
+    draw.line([(fx0, fy0), (fx0, fy0 + fh + h * 0.28)], fill=INK, width=2)
+    for i, col in enumerate([(222, 42, 36), (255, 255, 255), (26, 26, 26)]):
+        draw.rectangle([fx0, fy0 + fh * i / 3, fx0 + fw,
+                        fy0 + fh * (i + 1) / 3], fill=col)
+    draw.rectangle([fx0, fy0, fx0 + fw, fy0 + fh], outline=INK, width=1)
+
+
 ART = {
     "akvan": art_akvan, "cop31": art_cop31, "ukeu": art_ukeu,
     "apec": art_apec, "youth": art_youth, "italy": art_italy,
@@ -633,6 +754,7 @@ ART = {
     "gaza": art_gaza,
     "anthropic": art_anthropic, "senate": art_senate,
     "berlin": art_berlin, "baseball": art_baseball,
+    "kyiv": art_kyiv, "poland": art_poland, "iraq": art_iraq,
 }
 
 
@@ -780,9 +902,9 @@ def draw_map(draw, stories, x, y, w, h):
         placed.append((cx, cy))
         if (cx, cy) != (px, py):
             draw.line([(px, py), (cx, cy)], fill=WHITE, width=1)
-        r = 7
+        r = 8
         draw.ellipse([cx - r, cy - r, cx + r, cy + r], fill=RED,
-                     outline=WHITE, width=1)
+                     outline=WHITE, width=2)
         num = str(item["n"])
         tw = pin_face.getlength(num)
         draw.text((cx - tw / 2, cy - 6), num, font=pin_face, fill=WHITE)
@@ -932,7 +1054,7 @@ def render_page(stories, out_path):
 
     # ---- World map. ----
     y += 6
-    map_h = 88
+    map_h = 96
     draw_map(draw, stories, EDGE, y, CONTENT_W, map_h)
     y += map_h
 
@@ -941,7 +1063,7 @@ def render_page(stories, out_path):
     also_face = typeface("also")
     num_face = typeface("also_num")
     col_w = (CONTENT_W - 2 * 14) // 3  # 312
-    row_h = 13
+    row_h = 12
     cols = [[], [], []]
     for i, item in enumerate(stories["also"]):
         cols[i // 9].append(item)

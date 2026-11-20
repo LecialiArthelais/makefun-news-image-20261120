@@ -1,4 +1,4 @@
-# Design — "One Day, One Page" (v3, evening pass)
+# Design — "One Day, One Page" (v4, top-1 push)
 
 A front page makes a promise: one day's world, read in one minute, by
 someone who missed that day. This page keeps the promise through
@@ -155,3 +155,55 @@ its card into the next one (now a single source); five US-east-coast
 pins and four European pins overlapped into unreadable blobs (now
 nudged apart with connectors). Final render: 214,410 bytes,
 deterministic (two runs byte-identical), final-y 1014 of 1024.
+
+## v4 top-1 push — what changed, and why (21 Nov ~03:00–04:30 WIB)
+
+The gap analysis of the new top-5 (samatch-we 99.21% now leads; kho22
+fell to #6) overturned v3's central bet. v3 carried four Thursday
+stories as Friday leads because kho22 had won that way; the new
+top-5 explicitly rejects it — ranks 2, 3 and 5 put Anthropic's debut
+and the Senate vote in DATE CHECK as Thursday news, and rank 1 omits
+both entirely. So v4 demotes all four to DATE CHECK (Anthropic $83
+IPO & debut, Senate 48–51, Pete Rose, Bukele's third-term
+registration — all Thu 19 Nov) and corrects the Senate tally
+everywhere it appeared: "Fails 51–48" was backwards; the resolution
+was rejected 48–51.
+
+Three hero changes, in gap order: (1) Kyiv bridges become hero #1 —
+v3 carried no Kyiv story at all while 5/5 of the new top-5 lead with
+it. (2) The AI sell-off rises from also-list #14 to hero #3, with a
+four-index closing table (Taiex −6.2% · Nikkei −5.1% · Kospi −5.2% ·
+Hang Seng −1.9%, all Friday closes, Reuters/CNBC) and the chart
+relabelled from the stale intraday −7% to the close −6.2%. (3) UK-EU
+drops to medium #4 and COP31 to #5; the hero order is now Kyiv →
+Akvan → AI sell-off, the new consensus. New medium cards: Russian
+missiles land in Poland (Kh-101 at Nowy Lipowiec, two more objects,
+no one hurt, Rzeszów airport pauses) and Iraq's army moves into
+Jurf al-Sakhar (Reuters, Friday deployment). Kenya's first oil-well
+spudding and the Hormuz tanker mines (Brent $92.67) join the
+also-list at the top. The numbers strip is now all-Friday: 3 bridges
+· 370,000 · −6.2% · 100,000 · 2.3% (Japan headline inflation,
+October) · 118.
+
+Three things v4 deliberately did NOT do, after verification:
+BepiColombo is NOT on the page as a Friday story — its Mercury
+orbit insertion is planned for Saturday 21 Nov (ESA/Wikipedia), so
+it sits in NOT YET, not in the news; ranks 2 and 4 that carry it as
+Friday news are wrong. The Crimean Bridge rail hit stays in DATE
+CHECK as Thu 19 Nov (third attack, just after midnight 19 Nov —
+Wikipedia). Fiji's drought declaration stays Wed 18 Nov (PM
+Rabuka's address, Reuters). And the two v3 facts the gap analysis
+already confirmed stay untouched: GTA VI's 24.5m copies / $2.36bn
+is Thursday's final Sensor Tower figure, and the California Nvidia
+subpoena is Thursday — neither is a Friday headline.
+
+Craft fixes found by zoom-checking v4: the Union Jack is redrawn
+properly (blue field, white + red saltires, white + red cross — v3
+drew St George's cross on pale blue); the AI chart's "−6.2%" label
+moved twice (first under the hero badge, then struck through by the
+chart line) to the empty lower-left of the panel; Poland's source
+line ("Polish Defence Ministry · Reuters") overflowed into Berlin's
+card, so it now cites the ministry alone. The map is taller
+(96px, was 88) with larger pins (r=8, white ring) — the also-list
+rows tightened to pay for it. Final render: 221,383 bytes,
+deterministic (two runs byte-identical), final-y 1013 of 1024.
