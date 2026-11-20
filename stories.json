@@ -1,0 +1,308 @@
+{
+ "also": [
+  {
+   "deck": "Five measures to steady stocks; short-selling limits take effect today",
+   "headline": "Taiwan acts to calm stock sell-off",
+   "sources": [
+    "SimpleLife.news"
+   ]
+  },
+  {
+   "deck": "Stance unchanged since 1972, she tells APEC press corps",
+   "headline": "Takaichi ducks Taiwan contingency question",
+   "sources": [
+    "SimpleLife.news"
+   ]
+  },
+  {
+   "deck": "US media verdict after the Shenzhen summit",
+   "headline": "Xi and Putin seen as summit winners",
+   "sources": [
+    "SimpleLife.news",
+    "NYT",
+    "CNN"
+   ]
+  },
+  {
+   "deck": "Upgrade for the Navy's Barak missile shield",
+   "headline": "India seals Rs 1,976-crore deal with Israel Aerospace",
+   "sources": [
+    "JagranJosh"
+   ]
+  },
+  {
+   "deck": "Milestone for home-grown health innovation",
+   "headline": "ICMR completes 100 tech-transfer deals",
+   "sources": [
+    "JagranJosh"
+   ]
+  },
+  {
+   "deck": "Eight teams in Doha, including India A and Pakistan A",
+   "headline": "Rising Stars Asia Cup begins in Qatar",
+   "sources": [
+    "JagranJosh"
+   ]
+  },
+  {
+   "deck": "Prima retinal implant rollout across Europe",
+   "headline": "Science Corp raises $400m for sight-restoring implant",
+   "sources": [
+    "Health News Wired"
+   ]
+  },
+  {
+   "deck": "First US sanctions on an Australian crime group",
+   "headline": "US sanctions Comanchero motorcycle gang",
+   "sources": [
+    "Reuters"
+   ]
+  },
+  {
+   "deck": "Court rules staff emails breached the constitution",
+   "headline": "US agriculture chief's religious emails unlawful",
+   "sources": [
+    "The Guardian"
+   ]
+  },
+  {
+   "deck": "Big tech builds fast; Labor pressed on loopholes",
+   "headline": "Australia pressed over data-centre rules",
+   "sources": [
+    "The Guardian"
+   ]
+  },
+  {
+   "deck": "Gale warning for Suwarrow; storm alert for Nassau and Pukapuka",
+   "headline": "CYCLONE XAVIER BEARS DOWN ON COOK ISLANDS",
+   "sources": [
+    "Fiji Met Service",
+    "WMO"
+   ]
+  },
+  {
+   "deck": "Lawrence, Hutcherson and Harrelson return",
+   "headline": "Hunger Games stars back for Sunrise on the Reaping",
+   "sources": [
+    "Variety"
+   ]
+  }
+ ],
+ "date": "Friday, 20 November 2026",
+ "hero": {
+  "deck": "Allies agree a united position at the Berlin summit — and say they are ready to talk to Moscow",
+  "headline": "EUROPE READY FOR TALKS WITH RUSSIA",
+  "sources": [
+   "BBC",
+   "Reuters"
+  ],
+  "graphic": "skyline",
+  "place": "BERLIN"
+ },
+ "masthead": "THE WORLD IN ONE DAY",
+ "regions": {
+  "AMERICAS": [
+   {
+    "deck": "Late baseball legend cleared posthumously",
+    "headline": "Trump pardons Pete Rose",
+    "sources": [
+     "BBC"
+    ]
+   },
+   {
+    "deck": "Staff struggled to find a vein, witnesses say",
+    "headline": "Texas botches execution of Reinaldo Dennes",
+    "sources": [
+     "The Guardian"
+    ]
+   },
+   {
+    "deck": "Detonation plan halted after public outcry",
+    "headline": "US Army postpones chemical blast plan",
+    "sources": [
+     "The Guardian"
+    ]
+   },
+   {
+    "deck": "Crime-crackdown president seeks another term",
+    "headline": "Bukele set to formalise third-term bid",
+    "sources": [
+     "Al Jazeera"
+    ]
+   },
+   {
+    "deck": "Job posting points to agent that runs your Mac",
+    "headline": "Apple building its own AI agent",
+    "sources": [
+     "TechCrunch",
+     "Engadget"
+    ]
+   }
+  ],
+  "ASIA-PACIFIC": [
+   {
+    "deck": "Core CPI 2.2% in October; December hike expected",
+    "headline": "Japan inflation cements rate-hike case",
+    "sources": [
+     "Reuters"
+    ]
+   },
+   {
+    "deck": "One-year 3.00%, five-year 3.50% — 18th month on hold",
+    "headline": "China holds lending rates steady",
+    "sources": [
+     "Reuters"
+    ]
+   },
+   {
+    "deck": "6,310 arrested; $116m frozen in online gambling swoop",
+    "headline": "South Korea smashes gambling rings",
+    "sources": [
+     "GGRAsia"
+    ]
+   },
+   {
+    "deck": "113 not out on day one at Basin Reserve",
+    "headline": "Nicholls century anchors New Zealand",
+    "sources": [
+     "JagranJosh"
+    ]
+   },
+   {
+    "deck": "Centenary convention opens in New Delhi",
+    "headline": "Modi inaugurates FICCI centenary",
+    "sources": [
+     "JagranJosh"
+    ]
+   }
+  ],
+  "EUROPE": [
+   {
+    "deck": "Burnham meets Costa and von der Leyen in Brussels",
+    "headline": "UK-EU summit opens in Brussels",
+    "sources": [
+     "CRN Times"
+    ]
+   },
+   {
+    "deck": "Walkouts in 18 countries: 'Fight for our future'",
+    "headline": "Youth strike sweeps Europe",
+    "sources": [
+     "IPB",
+     "ZeroFox"
+    ]
+   },
+   {
+    "deck": "Secret operation locks down smart appliances",
+    "headline": "Thousands of UK fridges secured from hackers",
+    "sources": [
+     "BBC"
+    ]
+   },
+   {
+    "deck": "Judge rules on child abuse charges",
+    "headline": "Thomas Markle fit to stand trial",
+    "sources": [
+     "BBC"
+    ]
+   },
+   {
+    "deck": "Does ethnicity change how we experience death?",
+    "headline": "The unequal end of life",
+    "sources": [
+     "BBC"
+    ]
+   }
+  ],
+  "MIDDLE EAST & AFRICA": [
+   {
+    "deck": "Brent $92.22 as Houthi attacks hit Riyadh",
+    "headline": "Oil rises on Riyadh attacks",
+    "sources": [
+     "Reuters"
+    ]
+   },
+   {
+    "deck": "Migrant arrivals in Canary Islands up by two-thirds",
+    "headline": "Four bodies after Senegal boat capsizes",
+    "sources": [
+     "Al Jazeera"
+    ]
+   },
+   {
+    "deck": "Seven people trapped in Taiz speak to the BBC",
+    "headline": "'It's just fireworks': life under siege in Taiz",
+    "sources": [
+     "BBC"
+    ]
+   },
+   {
+    "deck": "AI data centres drive emissions up",
+    "headline": "Meta rethinks 2030 climate goals",
+    "sources": [
+     "Al Jazeera"
+    ]
+   }
+  ]
+ },
+ "top": [
+  {
+   "deck": "24.5m copies, about $2.36bn — biggest launch ever",
+   "headline": "GTA VI SMASHES RECORDS WITH $2.36BN DAY",
+   "sources": [
+    "BBC",
+    "Reuters"
+   ]
+  },
+  {
+   "deck": "MSCI Asia-Pacific down 7% on the week; Nikkei -4.1%",
+   "headline": "Asian shares head for worst week since 2020",
+   "sources": [
+    "Reuters"
+   ]
+  },
+  {
+   "deck": "Landfall near Gopalpur; 300,000 evacuated",
+   "headline": "CYCLONE AKVAN HITS INDIA'S EAST COAST",
+   "sources": [
+    "IMD",
+    "Daily Jagran"
+   ]
+  },
+  {
+   "deck": "Telegraph front page after the Shenzhen summit",
+   "headline": "Trump tells Europe: stop funding Ukraine war",
+   "sources": [
+    "The Telegraph"
+   ]
+  },
+  {
+   "deck": "Europe says use what is already pledged",
+   "headline": "COP31: Africa demands more climate cash",
+   "sources": [
+    "BBC"
+   ]
+  },
+  {
+   "deck": "Seven founders cashed out in record IPO",
+   "headline": "Anthropic founders bank nearly $2bn",
+   "sources": [
+    "TechCrunch"
+   ]
+  },
+  {
+   "deck": "Fire in Obolonskyi district after missile debris strike",
+   "headline": "Kyiv hit as missile debris sets building ablaze",
+   "sources": [
+    "Reuters"
+   ]
+  },
+  {
+   "deck": "Index near 103.9; yen 159.50; sterling near one-year low",
+   "headline": "Dollar nears 19-month peak as AI jitters spread",
+   "sources": [
+    "Reuters"
+   ]
+  }
+ ]
+}
